@@ -10,6 +10,16 @@ pipeline {
                     junit 'monappli/monappli-domaine/target/surefire-reports/*.xml'
                         }
                  }
-               
+		}
+		stage('Test') {
+			steps {
+				echo 'Testing..'
+			}
+		}
+		stage('Deploy') {
+			steps {
+				echo 'Deploying....'
+			}
 		}
 	}
+}
